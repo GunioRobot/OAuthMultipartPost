@@ -65,18 +65,18 @@ class OAuthMultipartPost
 
     message = "POST&#{CGI.escape(resource_url)}&#{CGI.escape(params_str)}"
 
-        # 署名する
-        # make a signature
-        digest = HMAC::SHA1.digest(key, message)
+    # 署名する
+    # make a signature
+    digest = HMAC::SHA1.digest(key, message)
     digest_base64 = Base64.encode64(digest).chomp
     params['oauth_signature'] = CGI.escape(digest_base64)
 
     # ヘッダを作成する
     # make a header
     h_params_str = params.
-        sort.
-        map{|kv| "#{kv[0]}=#{kv[1]}"}.
-    join(',')
+                   sort.
+                   map{|kv| "#{kv[0]}=#{kv[1]}"}.
+                   join(',')
     header = {
         'Host' => "#{host}",
         'Authorization' => "OAuth #{h_params_str}",
