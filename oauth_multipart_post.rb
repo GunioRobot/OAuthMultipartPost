@@ -97,9 +97,9 @@ class OAuthMultipartPost
     # APIサーバに要求を送信する
     # send a request to a API server
     case protocol
-    when 'http':
+    when 'http'
         con = Net::HTTP.new("#{host}")
-    when 'https':
+    when 'https'
         con = Net::HTTP.new("#{host}", '443')
         con.use_ssl = true
     else
