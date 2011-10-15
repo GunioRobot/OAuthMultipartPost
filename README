@@ -3,3 +3,6 @@ This is a class for multipart post with OAuth.
 
 このクラスの使用方法については，test_oauth_multipart_post.rb を参考にしてください．
 To know how to use this class, please show test_oauth_multipart_post.rb .
+
+現在，Twitterでの投稿のみ動作確認済みです．
+I confirmed only that this class works in tweet on twitter.
