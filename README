@@ -1,0 +1,5 @@
+OAuth認証でMultipartデータを送信するクラスです．
+This is a class for multipart post with OAuth.
+
+このクラスの使用方法については，test_oauth_multipart_post.rb を参考にしてください．
+To know how to use this class, please show test_oauth_multipart_post.rb .
