@@ -56,12 +56,12 @@ class OAuthMultipartPost
     # make a key for a signature
     key = "#{@consumer_secret}&#{@oauth_token_secret}"
 
-        # 署名対象の文字列をつくる
-        # make a string that is signed
-        params_str = params.
-        sort.
-        map{|kv| "#{kv[0]}=#{kv[1]}"}.
-    join('&')
+    # 署名対象の文字列をつくる
+    # make a string that is signed
+    params_str = params.
+                 sort.
+                 map{|kv| "#{kv[0]}=#{kv[1]}"}.
+                 join('&')
 
     message = "POST&#{CGI.escape(resource_url)}&#{CGI.escape(params_str)}"
 
